@@ -7,3 +7,5 @@ const result = arr
   .reduce((prev, curr) => prev + curr, 0);
 
 console.log('arr: ', result);
+
+arr.pipe(filter(), reduce()).subscribe();
