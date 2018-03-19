@@ -7,8 +7,6 @@ Rx.Observable.of({ name: 'Klaus' }, { age: 42 }, { address: 'Musterweg 14' })
   observer.next({age: 42});
   observer.next({address: 'Musterweg 14'});
 })*/
-  .scan((prev, curr) => {
-    //return Object.assign({}, prev, curr);
-    return { ...prev, ...curr };
-  })
+  //.scan((prev, curr) => Object.assign({}, prev, curr))
+  .scan((prev, curr) => ({ ...prev, ...curr }))
   .subscribe(obj => console.log(obj));
