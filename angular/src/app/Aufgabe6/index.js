@@ -8,8 +8,8 @@ Rx.Observable.interval(1000)
       return Rx.Observable.of(v);
     }
   })
+  .retry(2)
   .catch(e => {
     return Rx.Observable.of(e);
   })
-  .retry(2)
   .subscribe(v => console.log(v), e => console.log('booh'));
