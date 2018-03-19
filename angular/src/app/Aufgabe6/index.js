@@ -1,6 +1,6 @@
 const Rx = require('rxjs');
 
-Rx.Observable.interval(1000)
+Rx.Observable.interval(500)
   .mergeMap(v => {
     if (v % 5 === 0 && v > 0) {
       return Rx.Observable.throw('Boooh!');
@@ -10,6 +10,7 @@ Rx.Observable.interval(1000)
   })
   .retry(2)
   .catch(e => {
+    console.log('an error!');
     return Rx.Observable.of(e);
   })
   .subscribe(v => console.log(v), e => console.log('booh'));
