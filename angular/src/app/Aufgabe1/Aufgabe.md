@@ -10,4 +10,9 @@ Operatoren: create
 const { Observable } = require('rxjs');
 
 Observable.create()
+---
+
+import rxjs from 'rxjs';
+
+rxjs.Observable.create()
 ```
