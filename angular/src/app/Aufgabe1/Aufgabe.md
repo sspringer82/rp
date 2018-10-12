@@ -5,3 +5,9 @@ Erzeugt ein Observable, das im Abstand von 0,5 Sekunden die Zeichenketten
 Subscribed euch auf dieses Observable und gebt die Zeichenketten aus.
 
 Operatoren: create
+
+```
+const { Observable } = require('rxjs');
+
+Observable.create()
+```
